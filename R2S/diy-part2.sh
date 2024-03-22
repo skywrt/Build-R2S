@@ -49,15 +49,7 @@ function git_sparse_clone() {
   cd .. && rm -rf $repodir
 }
 
-
-# Add luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
-
-# Add OpenClash
-git clone --depth=1 https://github.com/vernesong/OpenClash
-
 # 添加额外插件
-#git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
-#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
-#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
