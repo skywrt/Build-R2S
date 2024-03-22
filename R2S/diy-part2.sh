@@ -39,11 +39,12 @@ sed -i "s/<%=pcdata(ver.distname)%> <%=pcdata(ver.distversion)%>/<%=pcdata(ver.d
 # 修改概览里时间显示为中文数字
 sed -i 's/os.date()/os.date("%Y年%m月%d日") .. " " .. translate(os.date("%A")) .. " " .. os.date("%X")/g' package/lean/autocore/files/arm/index.htm
 
-# Hello World
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+# Add luci-app-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
-# passwall
-echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> feeds.conf.default
+# Add OpenClash
+git clone --depth=1 https://github.com/vernesong/OpenClash
 
 # Git稀疏克隆，只克隆指定目录到本地
 #function git_sparse_clone() {
