@@ -1,4 +1,4 @@
-name: Build OpenWrt
+name: Build OpenWrt1
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
